@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overlay</title>
+    <style>
+        .container {
+            width: 500px;
+            height: 281px;
+            display: flex;
+            transition: 0.8s;
+            justify-content: center;
+            align-items: center;
+            background-image: url("https://images.pexels.com/photos/2387418/pexels-photo-2387418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+            background-position: center;
+            background-size: cover;
+        }
+
+        .image p {
+            opacity: 0;
+            transform: scale(0);
+            font-size: 2rem;
+            transition: 0.4s;
+            color: white;
+        }
+
+        .container:hover .image {
+            box-shadow: 0 0 0 200px rgba(198, 196, 196, 0.712) inset;
+            width: 100%;
+            transition: 0.4s;
+        }
+
+        .container:hover .image>p {
+            opacity: 1;
+            transform: scale(1);
+            text-align: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="image">
+            <p>Hello,World</p>
+        </div>
+    </div>
+</body>
+
+</html>
